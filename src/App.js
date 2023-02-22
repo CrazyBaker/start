@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { React, useState, useEffect } from 'react';
+import Desktop from './Components/Adaptive/Desktop.jsx';
+import Mobile from './Components/Adaptive/Mobile.jsx';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1080) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [isMobile]);
+
+  return <div className="App">{isMobile ? <Mobile /> : <Desktop />}</div>;
 }
 
 export default App;
