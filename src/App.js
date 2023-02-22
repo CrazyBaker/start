@@ -6,6 +6,8 @@ import Mobile from './Components/Adaptive/Mobile.jsx';
 function App() {
   const [isMobile, setIsMobile] = useState(false);
 
+  console.log(window.innerHeight);
+
   useEffect(() => {
     if (window.innerWidth <= 1080) {
       setIsMobile(true);
