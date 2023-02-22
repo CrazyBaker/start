@@ -21,17 +21,7 @@ export default function AnimatedImg({
       (scrollY / durationEqualizer - scrollStart / durationEqualizer) * animEqualizer - start * -1;
   }
 
-  // if (animProperty === 'transform: translateY') {
   if (animProperty === 'transform: translateY' && scrollY >= scrollStart) {
-    console.log('scroll ' + scrollY);
-    console.log('scrollEND ' + scrollEnd);
-    console.log('scrollSTART ' + scrollStart);
-    console.log('animEqualizer ' + animEqualizer);
-    console.log('durationEqualizer ' + durationEqualizer);
-    console.log('animProgress ' + animProgress);
-    console.log('scrollY - scrollStart ' + (scrollY - scrollStart));
-    console.log('scrollEnd - scrollStart ' + (scrollEnd - scrollStart));
-
     scrollY - scrollStart > scrollEnd - scrollStart
       ? (style = {
           transform: `translateY(${end}px)`,
@@ -42,15 +32,6 @@ export default function AnimatedImg({
   }
 
   if (animProperty === 'opacity') {
-    // console.log('scroll ' + scrollY);
-    // console.log('scrollEND ' + scrollEnd);
-    // console.log('scrollSTART ' + scrollStart);
-    // console.log('animEqualizer ' + animEqualizer);
-    // console.log('durationEqualizer ' + durationEqualizer);
-    // console.log('animProgress ' + animProgress);
-    // console.log('scrollY - scrollStart ' + (scrollY - scrollStart));
-    // console.log('scrollEnd - scrollStart ' + (scrollEnd - scrollStart));
-
     scrollY - scrollStart > scrollEnd - scrollStart
       ? (style = {
           opacity: end,
