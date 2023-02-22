@@ -1,19 +1,20 @@
-import './App.css';
-import { React, useState, useEffect } from 'react';
-import Desktop from './Components/Adaptive/Desktop.jsx';
-import Mobile from './Components/Adaptive/Mobile.jsx';
+import "./App.css";
+import { React, useState, useEffect } from "react";
+import Desktop from "./Components/Adaptive/Desktop.jsx";
+import Mobile from "./Components/Adaptive/Mobile.jsx";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  console.log(window.innerHeight);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1080);
 
   useEffect(() => {
-    if (window.innerWidth <= 1080) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
+    window.addEventListener(`resize`, () => {
+      setIsMobile(window.innerWidth <= 1080);
+    });
+    return () => {
+      window.removeEventListener(`resize`, () => {
+        setIsMobile(window.innerWidth <= 1080);
+      });
+    };
   }, [isMobile]);
 
   return <div className="App">{isMobile ? <Mobile /> : <Desktop />}</div>;

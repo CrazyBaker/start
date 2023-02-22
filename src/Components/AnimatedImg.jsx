@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function AnimatedImg({
   imagePath,
@@ -21,7 +21,17 @@ export default function AnimatedImg({
       (scrollY / durationEqualizer - scrollStart / durationEqualizer) * animEqualizer - start * -1;
   }
 
-  if (animProperty === 'transform: translateY' && scrollY >= scrollStart) {
+  switch (animProperty) {
+    case "transform: translateY":
+      style = { transform: `translateY(${start}px)` };
+      break;
+    case "opacity":
+      style = {
+        opacity: start,
+      };
+  }
+
+  if (animProperty === "transform: translateY" && scrollY >= scrollStart) {
     scrollY - scrollStart > scrollEnd - scrollStart
       ? (style = {
           transform: `translateY(${end}px)`,
@@ -31,7 +41,7 @@ export default function AnimatedImg({
         });
   }
 
-  if (animProperty === 'opacity') {
+  if (animProperty === "opacity") {
     scrollY - scrollStart > scrollEnd - scrollStart
       ? (style = {
           opacity: end,

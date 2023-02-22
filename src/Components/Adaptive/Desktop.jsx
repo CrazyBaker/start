@@ -1,17 +1,17 @@
-import { React, useEffect, useState } from 'react';
-import AnimatedImg from '../AnimatedImg.jsx';
-import styles from '../AnimatedImg.module.css';
+import { React, useEffect, useState } from "react";
+import AnimatedImg from "../AnimatedImg.jsx";
+import styles from "../AnimatedImg.module.css";
 
 export default function Desktop() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       setScrollY(window.scrollY);
     });
 
     return () => {
-      document.body.removeEventListener('scroll', () => {
+      document.body.removeEventListener("scroll", () => {
         setScrollY(window.scrollY);
       });
     };
@@ -20,17 +20,17 @@ export default function Desktop() {
     <>
       <AnimatedImg
         className={styles.logo}
-        imagePath={require('../../img/logo.png')}
+        imagePath={require("../../img/logo.png")}
         animProperty="transform: translateY"
         start={0}
-        end={-370}
+        end={-430}
         scrollY={scrollY}
         scrollStart={0}
         scrollEnd={800}
       />
       <AnimatedImg
         className={styles.cloud}
-        imagePath={require('../../img/cloud.png')}
+        imagePath={require("../../img/cloud.png")}
         animProperty="opacity"
         start={0}
         end={1}
@@ -40,7 +40,7 @@ export default function Desktop() {
       />
       <AnimatedImg
         className={styles.text}
-        imagePath={require('../../img/cloudText.png')}
+        imagePath={require("../../img/cloudText.png")}
         animProperty="opacity"
         start={0}
         end={1}
@@ -50,23 +50,23 @@ export default function Desktop() {
       />
       <AnimatedImg
         className={styles.buttons}
-        imagePath={require('../../img/buttons.png')}
+        imagePath={require("../../img/buttons.png")}
         animProperty="transform: translateY"
         start={window.innerHeight}
         end={0}
         scrollY={scrollY}
         scrollStart={1600}
-        scrollEnd={1900}
+        scrollEnd={2100}
       />
       <AnimatedImg
         className={styles.buttonsText}
-        imagePath={require('../../img/buttonText.png')}
+        imagePath={require("../../img/buttonText.png")}
         animProperty="opacity"
         start={0}
         end={1}
         scrollY={scrollY}
-        scrollStart={1900}
-        scrollEnd={2100}
+        scrollStart={2100}
+        scrollEnd={2300}
       />
     </>
   );
