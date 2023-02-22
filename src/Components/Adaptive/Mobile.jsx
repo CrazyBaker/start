@@ -113,16 +113,6 @@ export default function Mobile() {
             scrollStart={1600}
             scrollEnd={2200}
           />
-          <AnimatedImg
-            className={styles.buttonsText}
-            imagePath={require("../../img/buttonsTextMobile.png")}
-            animProperty="opacity"
-            start={0}
-            end={1}
-            scrollY={scrollY}
-            scrollStart={2200}
-            scrollEnd={2500}
-          />
         </>
       )}
 
@@ -137,16 +127,6 @@ export default function Mobile() {
             scrollY={scrollY}
             scrollStart={1600}
             scrollEnd={2200}
-          />
-          <AnimatedImg
-            className={styles.buttonsText}
-            imagePath={require("../../img/buttonsTextMobile.png")}
-            animProperty="opacity"
-            start={0}
-            end={1}
-            scrollY={scrollY}
-            scrollStart={2200}
-            scrollEnd={2500}
           />
         </>
       )}

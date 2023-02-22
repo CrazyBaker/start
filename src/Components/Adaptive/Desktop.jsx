@@ -23,7 +23,7 @@ export default function Desktop() {
         imagePath={require("../../img/logo.png")}
         animProperty="transform: translateY"
         start={0}
-        end={-430}
+        end={-400}
         scrollY={scrollY}
         scrollStart={0}
         scrollEnd={800}
