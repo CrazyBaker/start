@@ -22,7 +22,7 @@
 .buttons {
   position: fixed;
   margin-top: 800px;
-  transform: translateY(110px);
+  transform: translateY(120px);
   width: 1070px;
   height: 100px;
 }
@@ -42,24 +42,4 @@
 
 .buttonsTextMobile {
   display: none;
-}
-
-@media (max-width: 1080px) {
-  .buttons {
-    display: none;
-  }
-  .buttonsText {
-    display: none;
-  }
-  body {
-    min-height: 5000px;
-  }
-
-  .buttonsMobile {
-    display: none;
-  }
-
-  .buttonsTextMobile {
-    display: none;
-  }
 }

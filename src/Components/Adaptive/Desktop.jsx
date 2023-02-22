@@ -52,7 +52,7 @@ export default function Desktop() {
         className={styles.buttons}
         imagePath={require('../../img/buttons.png')}
         animProperty="transform: translateY"
-        start={110}
+        start={120}
         end={0}
         scrollY={scrollY}
         scrollStart={1600}
