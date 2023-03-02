@@ -132,7 +132,7 @@ const Adaptive = ({ screenWidth, scrollY }) => {
           scrollEnd={800}
         />
         <AnimatedImg
-          className={styles.cloud}
+          className={stylesMobile.cloud}
           imagePath={require('../../img/cloud.png')}
           animProperty="opacity"
           start={0}
@@ -142,7 +142,7 @@ const Adaptive = ({ screenWidth, scrollY }) => {
           scrollEnd={1200}
         />
         <AnimatedImg
-          className={styles.text}
+          className={stylesMobile.text}
           imagePath={require('../../img/cloudText.png')}
           animProperty="opacity"
           start={0}
@@ -152,7 +152,7 @@ const Adaptive = ({ screenWidth, scrollY }) => {
           scrollEnd={1600}
         />
         <AnimatedImg
-          className={styles.buttons}
+          className={stylesMobile.buttons}
           imagePath={require('../../img/buttonsMobile.png')}
           animProperty="transform: translateY"
           start={window.innerHeight}
@@ -162,7 +162,7 @@ const Adaptive = ({ screenWidth, scrollY }) => {
           scrollEnd={2200}
         />
         <AnimatedImg
-          className={styles.buttonsText}
+          className={stylesMobile.buttonsText}
           imagePath={require('../../img/buttonsTextMobile.png')}
           animProperty="opacity"
           start={0}
