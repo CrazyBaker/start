@@ -43,7 +43,7 @@ export default function Desktop({ scrollY }) {
         end={0}
         scrollY={scrollY}
         scrollStart={1600}
-        scrollEnd={2100}
+        scrollEnd={2200}
       />
       <AnimatedImg
         className={styles.buttonsText}
@@ -52,8 +52,8 @@ export default function Desktop({ scrollY }) {
         start={0}
         end={1}
         scrollY={scrollY}
-        scrollStart={2100}
-        scrollEnd={2300}
+        scrollStart={2200}
+        scrollEnd={2500}
       />
     </>
   );
