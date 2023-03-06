@@ -18,11 +18,7 @@ export default function AnimatedImg({
 
   const screenHeigh = window.innerHeight;
 
-  const [bodyHeigh, setBodyHeigh] = useState(
-    document.querySelector('body').style.minHeight
-      ? !isNaN(+document.querySelector('body').style.minHeight)
-      : 0,
-  );
+  const [bodyHeigh, setBodyHeigh] = useState(0);
 
   if (screenHeigh + scrollEnd > bodyHeigh) {
     document.querySelector('body').style.minHeight = `${screenHeigh + scrollEnd}px`;
